@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabysitterCalculator", "BabysitterCalculator\BabysitterCalculator.csproj", "{2DB7AB50-D6D9-45F4-A120-00D037041665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabysitterCalculator.Droid", "Droid\BabysitterCalculator.Droid.csproj", "{9D84493B-2BA3-4F7F-BF2B-7C754C2CA1DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabysitterCalculator.UITests", "UITests\BabysitterCalculator.UITests.csproj", "{1E26C1D2-7E72-4A1C-83E9-6FFAE51A6161}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E26C1D2-7E72-4A1C-83E9-6FFAE51A6161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E26C1D2-7E72-4A1C-83E9-6FFAE51A6161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E26C1D2-7E72-4A1C-83E9-6FFAE51A6161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E26C1D2-7E72-4A1C-83E9-6FFAE51A6161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DB7AB50-D6D9-45F4-A120-00D037041665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DB7AB50-D6D9-45F4-A120-00D037041665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DB7AB50-D6D9-45F4-A120-00D037041665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DB7AB50-D6D9-45F4-A120-00D037041665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D84493B-2BA3-4F7F-BF2B-7C754C2CA1DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D84493B-2BA3-4F7F-BF2B-7C754C2CA1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D84493B-2BA3-4F7F-BF2B-7C754C2CA1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D84493B-2BA3-4F7F-BF2B-7C754C2CA1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
