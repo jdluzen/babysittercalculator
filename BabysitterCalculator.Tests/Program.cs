@@ -65,5 +65,17 @@ namespace BabysitterCalculator.Tests
         {
             Assert.Throws<ArgumentException>(() => calc.Calculate(min, max, min.AddMinutes(30)));
         }
+
+        [Test]
+        public void Test_FloorHours()
+        {
+            Assert.AreEqual(min.AddMinutes(30).AddSeconds(30).FloorHour(), min);
+        }
+
+        [Test]
+        public void Test_CeilHours()
+        {
+            Assert.AreEqual(min.AddMinutes(30).AddSeconds(30).CeilHour(), min.AddHours(1));
+        }
     }
 }

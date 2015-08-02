@@ -29,7 +29,10 @@ namespace BabysitterCalculator
                 throw new ArgumentException("bed time must be after 5 PM, and before 4 AM", "bedTime");
             if (bedTime.Minute != 0 || bedTime.Second != 0)
                 throw new ArgumentException("bed time must be on the hour", "bedTime");
-            
+            //no partial hours
+            start = start.FloorHour();
+            end = end.CeilHour();
+
             return 0;
         }
     }
