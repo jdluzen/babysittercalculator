@@ -59,5 +59,11 @@ namespace BabysitterCalculator.Tests
         {
             Assert.Throws<ArgumentException>(() => calc.Calculate(min, max, max.AddHours(1)));
         }
+
+        [Test]
+        public void Throws_if_bed_time_not_on_hour()
+        {
+            Assert.Throws<ArgumentException>(() => calc.Calculate(min, max, min.AddMinutes(30)));
+        }
     }
 }
