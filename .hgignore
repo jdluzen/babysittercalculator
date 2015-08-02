@@ -3,3 +3,7 @@ packages/*
 Droid/bin/*
 Droid/obj/*
 *.userprefs
+BabysitterCalculator.Tests/bin/*
+BabysitterCalculator.Tests/obj/*
+BabysitterCalculator/bin/*
+BabysitterCalculator/obj/*
