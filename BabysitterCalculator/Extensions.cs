@@ -17,5 +17,14 @@ namespace BabysitterCalculator
                 dt = dt.FloorHour().AddHours(1);
             return dt;
         }
+
+        public static DateTime GetMidnightForShift(this DateTime dt)
+        {
+            if (dt.TimeOfDay.Hours <= 4)
+                return dt.Date;
+            if (dt.TimeOfDay.Hours >= 17)
+                return dt.Date.AddDays(1);
+            throw new ArgumentException("DateTime must be inside a valid shift", "dt");
+        }
     }
 }

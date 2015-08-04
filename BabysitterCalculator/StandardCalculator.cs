@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BabysitterCalculator
 {
@@ -32,8 +34,31 @@ namespace BabysitterCalculator
             //no partial hours
             start = start.FloorHour();
             end = end.CeilHour();
+            return GetRates(start, end, bedTime).Sum();
+        }
 
-            return 0;
+        public virtual int GetTotalHours(DateTime start, DateTime end)
+        {
+            return (end - start).Hours;
+        }
+
+        private IEnumerable<decimal> GetRates(DateTime start, DateTime end, DateTime bedTime)
+        {
+            int totalHours = GetTotalHours(start, end);
+            DateTime midnight = start.GetMidnightForShift();
+            for (int hour = 0; hour < totalHours; hour++)
+            {
+                DateTime current = start.AddHours(hour);
+                if (current < midnight)//before midnight
+                {
+                    if (current < bedTime)//before bed
+                        yield return StartToBedRate;
+                    else
+                        yield return BedToMidnightRate;
+                }
+                else
+                    yield return MidnightToEndRate;//this rate is likely to be higher than the rest no matter what
+            }
         }
     }
 }
