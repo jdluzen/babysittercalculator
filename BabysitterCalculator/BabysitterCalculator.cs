@@ -22,6 +22,11 @@ namespace BabysitterCalculator
         protected override void OnResume()
         {
         }
+
+        public static void RunOnUiThread(Action a)
+        {
+            Device.BeginInvokeOnMainThread(a);
+        }
     }
 }
 

@@ -38,6 +38,7 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidLinkMode>Full</AndroidLinkMode>
     <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+    <AndroidLinkSkip>BabysitterCalculator</AndroidLinkSkip>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
