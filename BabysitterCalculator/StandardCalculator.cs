@@ -6,11 +6,11 @@ namespace BabysitterCalculator
 {
     public class StandardCalculator : ICalculator
     {
-        public decimal StartToBedRate { get; protected set; }
+        public decimal StartToBedRate { get; set; }
 
-        public decimal BedToMidnightRate { get; protected set; }
+        public decimal BedToMidnightRate { get; set; }
 
-        public decimal MidnightToEndRate { get; protected set; }
+        public decimal MidnightToEndRate { get; set; }
 
         public StandardCalculator(decimal startToBedRate, decimal bedToMidnightRate, decimal midnightToEndRate)
         {
